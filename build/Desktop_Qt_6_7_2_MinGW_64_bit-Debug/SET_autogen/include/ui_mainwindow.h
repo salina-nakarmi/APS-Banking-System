@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListView>
@@ -34,13 +35,14 @@ public:
     QHBoxLayout *horizontalLayout;
     QStackedWidget *stackedWidget;
     QWidget *page;
-    QTextEdit *textEditpassword;
-    QTextEdit *textEditname;
+    QGridLayout *gridLayout;
     QLabel *MainWindow_2;
-    QTextEdit *textEditemail;
-    QLabel *labelemail;
     QLabel *labelname;
+    QTextEdit *textEditname;
+    QLabel *labelemail;
+    QTextEdit *textEditemail;
     QLabel *labelpassword;
+    QTextEdit *textEditpassword;
     QPushButton *pushButtonconfirm;
     QWidget *page_3;
     QPushButton *pushButtonrecord;
@@ -78,7 +80,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(1920, 1080);
+        MainWindow->resize(671, 395);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -87,42 +89,60 @@ public:
         stackedWidget->setObjectName("stackedWidget");
         page = new QWidget();
         page->setObjectName("page");
-        textEditpassword = new QTextEdit(page);
-        textEditpassword->setObjectName("textEditpassword");
-        textEditpassword->setGeometry(QRect(250, 210, 181, 31));
-        textEditname = new QTextEdit(page);
-        textEditname->setObjectName("textEditname");
-        textEditname->setGeometry(QRect(250, 110, 181, 31));
+        gridLayout = new QGridLayout(page);
+        gridLayout->setObjectName("gridLayout");
         MainWindow_2 = new QLabel(page);
         MainWindow_2->setObjectName("MainWindow_2");
-        MainWindow_2->setGeometry(QRect(60, 30, 391, 41));
         QFont font;
         font.setPointSize(24);
         font.setBold(true);
         MainWindow_2->setFont(font);
-        textEditemail = new QTextEdit(page);
-        textEditemail->setObjectName("textEditemail");
-        textEditemail->setGeometry(QRect(250, 160, 181, 31));
-        labelemail = new QLabel(page);
-        labelemail->setObjectName("labelemail");
-        labelemail->setGeometry(QRect(110, 170, 121, 16));
-        QFont font1;
-        font1.setPointSize(18);
-        labelemail->setFont(font1);
+
+        gridLayout->addWidget(MainWindow_2, 0, 0, 1, 3);
+
         labelname = new QLabel(page);
         labelname->setObjectName("labelname");
-        labelname->setGeometry(QRect(110, 120, 71, 16));
+        QFont font1;
+        font1.setPointSize(18);
         labelname->setFont(font1);
+
+        gridLayout->addWidget(labelname, 1, 0, 1, 1);
+
+        textEditname = new QTextEdit(page);
+        textEditname->setObjectName("textEditname");
+
+        gridLayout->addWidget(textEditname, 1, 2, 1, 1);
+
+        labelemail = new QLabel(page);
+        labelemail->setObjectName("labelemail");
+        labelemail->setFont(font1);
+
+        gridLayout->addWidget(labelemail, 2, 0, 1, 2);
+
+        textEditemail = new QTextEdit(page);
+        textEditemail->setObjectName("textEditemail");
+
+        gridLayout->addWidget(textEditemail, 2, 2, 1, 1);
+
         labelpassword = new QLabel(page);
         labelpassword->setObjectName("labelpassword");
-        labelpassword->setGeometry(QRect(110, 220, 101, 16));
         labelpassword->setFont(font1);
+
+        gridLayout->addWidget(labelpassword, 3, 0, 1, 2);
+
+        textEditpassword = new QTextEdit(page);
+        textEditpassword->setObjectName("textEditpassword");
+
+        gridLayout->addWidget(textEditpassword, 3, 2, 1, 1);
+
         pushButtonconfirm = new QPushButton(page);
         pushButtonconfirm->setObjectName("pushButtonconfirm");
-        pushButtonconfirm->setGeometry(QRect(200, 270, 111, 31));
         QFont font2;
         font2.setPointSize(16);
         pushButtonconfirm->setFont(font2);
+
+        gridLayout->addWidget(pushButtonconfirm, 4, 1, 1, 2);
+
         stackedWidget->addWidget(page);
         page_3 = new QWidget();
         page_3->setObjectName("page_3");
@@ -235,7 +255,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1920, 17));
+        menubar->setGeometry(QRect(0, 0, 671, 33));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -252,14 +272,8 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        textEditpassword->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Enter your password</p></body></html>", nullptr));
+        MainWindow_2->setText(QCoreApplication::translate("MainWindow", "              Welcome to SET", nullptr));
+        labelname->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
         textEditname->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -268,7 +282,7 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Enter your Name</p></body></html>", nullptr));
-        MainWindow_2->setText(QCoreApplication::translate("MainWindow", "              Welcome to SET", nullptr));
+        labelemail->setText(QCoreApplication::translate("MainWindow", "Email-address", nullptr));
         textEditemail->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -277,9 +291,15 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Enter your email</p></body></html>", nullptr));
-        labelemail->setText(QCoreApplication::translate("MainWindow", "Email-address", nullptr));
-        labelname->setText(QCoreApplication::translate("MainWindow", "Name", nullptr));
         labelpassword->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
+        textEditpassword->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"hr { height: 1px; border-width: 0; }\n"
+"li.unchecked::marker { content: \"\\2610\"; }\n"
+"li.checked::marker { content: \"\\2612\"; }\n"
+"</style></head><body style=\" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Enter your password</p></body></html>", nullptr));
         pushButtonconfirm->setText(QCoreApplication::translate("MainWindow", "Confirm", nullptr));
         pushButtonrecord->setText(QCoreApplication::translate("MainWindow", "Records", nullptr));
         pushButtonreports->setText(QCoreApplication::translate("MainWindow", "Reports", nullptr));
