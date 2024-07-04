@@ -22,11 +22,31 @@ public:
 private slots:
 
     void on_pushButtonlogin_clicked();
+
     void on_pushButtoncreate_clicked();
 
+    void on_pushButtonconfirm_clicked();
+
+    void on_pushButtonok_clicked();
+
+    void on_pushButtonback_e_clicked();
+
+    void on_pushButtonok_e_clicked();
 
 
+    void on_pushButtonadd_clicked();
 
+    void on_pushButtonadde_clicked();
+
+    void on_pushButtonaddi_clicked();
+
+    void on_pushButtoncancel_clicked();
+
+    void on_pushButtongback_in_clicked();
+
+    void on_pushButtonok_in_clicked();
+
+    void on_pushButtonsignup_clicked();
 
 private:
     Ui::MainWindow *ui;

@@ -47,16 +47,77 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
+//navigation
 void MainWindow::on_pushButtonlogin_clicked()
 {
-   ui->stackedWidget->setCurrentIndex(1);
+   ui->stackedWidget->setCurrentIndex(3);
 }
-
 
 void MainWindow::on_pushButtoncreate_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButtonsignup_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_pushButtonconfirm_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow:: on_pushButtonok_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_pushButtonback_e_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+void MainWindow::on_pushButtonok_e_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_pushButtonadd_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+
+void MainWindow::on_pushButtonadde_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
+}
+
+
+void MainWindow::on_pushButtonaddi_clicked()
+{
+     ui->stackedWidget->setCurrentIndex(6);
+}
+
+
+void MainWindow::on_pushButtoncancel_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
+}
+
+
+void MainWindow::on_pushButtongback_in_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(4);
+}
+
+
+void MainWindow::on_pushButtonok_in_clicked()
+{
+  ui->stackedWidget->setCurrentIndex(3);
 }
 
 

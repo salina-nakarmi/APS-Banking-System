@@ -38,7 +38,18 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "MainWindow",
     "on_pushButtonlogin_clicked",
     "",
-    "on_pushButtoncreate_clicked"
+    "on_pushButtoncreate_clicked",
+    "on_pushButtonconfirm_clicked",
+    "on_pushButtonok_clicked",
+    "on_pushButtonback_e_clicked",
+    "on_pushButtonok_e_clicked",
+    "on_pushButtonadd_clicked",
+    "on_pushButtonadde_clicked",
+    "on_pushButtonaddi_clicked",
+    "on_pushButtoncancel_clicked",
+    "on_pushButtongback_in_clicked",
+    "on_pushButtonok_in_clicked",
+    "on_pushButtonsignup_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -51,7 +62,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+      13,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,10 +70,32 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x08,    1 /* Private */,
-       3,    0,   27,    2, 0x08,    2 /* Private */,
+       1,    0,   92,    2, 0x08,    1 /* Private */,
+       3,    0,   93,    2, 0x08,    2 /* Private */,
+       4,    0,   94,    2, 0x08,    3 /* Private */,
+       5,    0,   95,    2, 0x08,    4 /* Private */,
+       6,    0,   96,    2, 0x08,    5 /* Private */,
+       7,    0,   97,    2, 0x08,    6 /* Private */,
+       8,    0,   98,    2, 0x08,    7 /* Private */,
+       9,    0,   99,    2, 0x08,    8 /* Private */,
+      10,    0,  100,    2, 0x08,    9 /* Private */,
+      11,    0,  101,    2, 0x08,   10 /* Private */,
+      12,    0,  102,    2, 0x08,   11 /* Private */,
+      13,    0,  103,    2, 0x08,   12 /* Private */,
+      14,    0,  104,    2, 0x08,   13 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -81,6 +114,28 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         // method 'on_pushButtonlogin_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButtoncreate_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonconfirm_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonok_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonback_e_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonok_e_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonadd_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonadde_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonaddi_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtoncancel_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtongback_in_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonok_in_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pushButtonsignup_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -94,6 +149,17 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_pushButtonlogin_clicked(); break;
         case 1: _t->on_pushButtoncreate_clicked(); break;
+        case 2: _t->on_pushButtonconfirm_clicked(); break;
+        case 3: _t->on_pushButtonok_clicked(); break;
+        case 4: _t->on_pushButtonback_e_clicked(); break;
+        case 5: _t->on_pushButtonok_e_clicked(); break;
+        case 6: _t->on_pushButtonadd_clicked(); break;
+        case 7: _t->on_pushButtonadde_clicked(); break;
+        case 8: _t->on_pushButtonaddi_clicked(); break;
+        case 9: _t->on_pushButtoncancel_clicked(); break;
+        case 10: _t->on_pushButtongback_in_clicked(); break;
+        case 11: _t->on_pushButtonok_in_clicked(); break;
+        case 12: _t->on_pushButtonsignup_clicked(); break;
         default: ;
         }
     }
@@ -119,13 +185,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 13)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 13;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 13)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
+        _id -= 13;
     }
     return _id;
 }
