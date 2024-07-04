@@ -43,6 +43,8 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Lenovo/OneDrive/Desk
 set(OLD_GLOB
   "C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/3.29.3/CompilerIdCXX/CMakeCXXCompilerId.cpp"
   "C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/EWIEGA46WW/moc_mainwindow.cpp"
+  "C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/EWIEGA46WW/qrc_image.cpp"
+  "C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/EWIEGA46WW/qrc_img.cpp"
   "C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/mocs_compilation.cpp"
   "C:/Users/Lenovo/OneDrive/Desktop/SET/main.cpp"
   "C:/Users/Lenovo/OneDrive/Desktop/SET/mainwindow.cpp"
@@ -148,6 +150,7 @@ endif()
 # _directory_contents at C:/Qt/6.7.2/mingw_64/lib/cmake/Qt6LinguistTools/Qt6LinguistToolsMacros.cmake:55 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Lenovo/OneDrive/Desktop/SET/*.qrc")
 set(OLD_GLOB
+  "C:/Users/Lenovo/OneDrive/Desktop/SET/image.qrc"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

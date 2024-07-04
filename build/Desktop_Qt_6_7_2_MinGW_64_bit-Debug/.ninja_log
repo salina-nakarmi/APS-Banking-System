@@ -1,11 +1,17 @@
 # ninja log v6
-30	673	7417796010833001	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	80f9e6bd027f8a24
-1055	4261	7417794328222492	CMakeFiles/SET.dir/main.cpp.obj	a2b25011a2ac8f24
-691	945	7417796017596746	SET_autogen/timestamp	6c30275962cc36bb
-1777	5053	7417787974827352	CMakeFiles/SET.dir/SET_autogen/mocs_compilation.cpp.obj	347934b9b54b94bb
-691	945	7417796017596746	SET_autogen/mocs_compilation.cpp	6c30275962cc36bb
-691	945	7417796017596746	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/timestamp	6c30275962cc36bb
-691	945	7417796017596746	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/mocs_compilation.cpp	6c30275962cc36bb
-947	4530	7417796020111557	CMakeFiles/SET.dir/mainwindow.cpp.obj	aa7c2f6c683af468
-148	1238	7417842535381233	build.ninja	96827a53b6a8568
-4530	4787	7417796055959199	SET.exe	56f09f64b55dce84
+30	298	7417767723452686	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/cmake.verify_globs	80f9e6bd027f8a24
+1364	4521	7417347669616322	CMakeFiles/SET.dir/main.cpp.obj	a2b25011a2ac8f24
+331	579	7417767726460832	SET_autogen/timestamp	6c30275962cc36bb
+1357	4296	7417347669575186	CMakeFiles/SET.dir/SET_autogen/mocs_compilation.cpp.obj	347934b9b54b94bb
+636	717	7415333138446020	SET_autogen/EWIEGA46WW/qrc_img.cpp	5368995f08fb9d8d
+331	579	7417767726460832	SET_autogen/mocs_compilation.cpp	6c30275962cc36bb
+733	814	7415333138667700	CMakeFiles/SET.dir/SET_autogen/EWIEGA46WW/qrc_img.cpp.obj	a6ee8a09e3a16e55
+331	579	7417767726460832	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/timestamp	6c30275962cc36bb
+331	579	7417767726460832	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/mocs_compilation.cpp	6c30275962cc36bb
+581	3473	7417767728945779	CMakeFiles/SET.dir/mainwindow.cpp.obj	aa7c2f6c683af468
+334	1783	7417844013157361	build.ninja	96827a53b6a8568
+3473	3684	7417767757886881	SET.exe	9f1342eabd6f9a3b
+636	717	7415333138446020	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/EWIEGA46WW/qrc_img.cpp	5368995f08fb9d8d
+633	754	7417342005659045	SET_autogen/EWIEGA46WW/qrc_image.cpp	9c27b3fa02be423c
+633	754	7417342005659045	C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/EWIEGA46WW/qrc_image.cpp	9c27b3fa02be423c
+760	1393	7417342005910651	CMakeFiles/SET.dir/SET_autogen/EWIEGA46WW/qrc_image.cpp.obj	f23d71020cafb61c

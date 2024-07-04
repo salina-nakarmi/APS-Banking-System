@@ -17,18 +17,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+
 private slots:
-    void on_pushButtonconfirm_clicked();
 
-    void on_pushButtonrecord_clicked();
+    void on_pushButtonlogin_clicked();
+    void on_pushButtoncreate_clicked();
 
-    void on_pushButtonadd_clicked();
 
-    void on_pushButtonok_2_clicked();
 
-    void on_pushButtonexpenses_clicked();
 
-    void on_pushButtonincome_clicked();
 
 private:
     Ui::MainWindow *ui;
