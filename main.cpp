@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 //             break;
 //         }
 //     }
-//kiran
+
     MainWindow w;
     w.show();
     return a.exec();
