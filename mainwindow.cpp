@@ -4,6 +4,8 @@
 #include<string>
 #include<QString>
 #include<fstream>
+#include <QtSql/QSqlError>
+#include <QtSql/QSqlQuery>
 #include <QDebug>
 #include <QDateTime>
 
@@ -12,6 +14,17 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+    // Set up the SQLite database
+    db = QSqlDatabase::addDatabase("QQLITE");
+    db.setDatabaseName("Tracker.db");
+    db.open();
+     if (!db.open()) {
+        qDebug() << "Error: Could not connect to database.";
+    } else {
+        qDebug() << "Database connected successfully.";
+    }
 
     QString strTime = "2024/07/03 21:05:56";
     qDebug() << "Time 1: " << strTime;
@@ -45,6 +58,7 @@ struct accountInfo{
 MainWindow::~MainWindow()
 {
     delete ui;
+    db.close();
 }
 
 //navigation

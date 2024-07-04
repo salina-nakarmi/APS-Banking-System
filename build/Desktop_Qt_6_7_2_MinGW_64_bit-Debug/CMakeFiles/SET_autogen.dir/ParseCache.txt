@@ -143,6 +143,11 @@ C:/Users/Lenovo/OneDrive/Desktop/SET/mainwindow.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qtransform.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtSql/QSqlDatabase
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtSql/qsqldatabase.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtSql/qtsql-config.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtSql/qtsqlexports.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtSql/qtsqlglobal.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h
