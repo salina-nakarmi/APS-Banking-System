@@ -7,49 +7,41 @@
 #include <QtSql/QSqlError>
 #include <QtSql/QSqlQuery>
 #include <QDebug>
-#include <QDateTime>
+#include <QDate>
+#include<QLabel>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent):
+     QMainWindow(parent),
+     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
+     
+    // Get the current date
+    QDate currentDate = QDate::currentDate();
+
+     //Date setup
+    // Set the date in the desired format
+    ui->dateLabel->setText(currentDate.toString("yyyy/MM/dd"));
+
+    //month setup
+    ui->monthLabel->setText(currentDate.toString("MMM"));
+    //year setup
+    ui->yearLabel->setText(currentDate.toString("yyyy"));
+    
+    //----------------------------------------------------------------------------
 
     // Set up the SQLite database
-    db = QSqlDatabase::addDatabase("QQLITE");
-    db.setDatabaseName("Tracker.db");
-    db.open();
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("users.db");
      if (!db.open()) {
         qDebug() << "Error: Could not connect to database.";
     } else {
         qDebug() << "Database connected successfully.";
     }
-
-    QString strTime = "2024/07/03 21:05:56";
-    qDebug() << "Time 1: " << strTime;
-
-    QString format = "yyyy/MM/dd HH:mm:ss";
-    QDateTime time = QDateTime::fromString(strTime, format);
-    qDebug() << "Time 2: " << time;
-
-    time.setTimeSpec(Qt::LocalTime);
-    QDateTime utc = time.toUTC();
-    qDebug() << "Time 3: " << utc;
-
-    time.setTimeSpec(Qt::UTC);
-    QDateTime local = time.toLocalTime();
-    qDebug() << "Time 4: " << local;
-
-    QString strLocal = local.toString(format);
-    qDebug() << "Time 5: " << strLocal;
-
-    // time offset: 1 hr 20 min 15 sec
-    time = time.addSecs(1 * 60 * 60 + 20 * 60 + 15);
-    QDateTime offsetTime = time.toLocalTime();
-    qDebug() << "Time 6: " << offsetTime.toString();
 }
 
+//just created struct not in use right now
 struct accountInfo{
     QString username;
     QString password;
@@ -80,11 +72,6 @@ void MainWindow::on_pushButtonsignup_clicked()
 void MainWindow::on_pushButtonconfirm_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
-}
-
-void MainWindow:: on_pushButtonok_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(3);
 }
 
 

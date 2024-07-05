@@ -2,12 +2,15 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include<QLabel>
 #include<QtSql/QSqlDatabase>
 
 QT_BEGIN_NAMESPACE
+
 namespace Ui {
 class MainWindow;
 }
+
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
@@ -28,12 +31,9 @@ private slots:
 
     void on_pushButtonconfirm_clicked();
 
-    void on_pushButtonok_clicked();
-
     void on_pushButtonback_e_clicked();
 
     void on_pushButtonok_e_clicked();
-
 
     void on_pushButtonadd_clicked();
 
@@ -52,5 +52,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
+    QLabel *dateLabel;
+    QLabel *monthYearLabel;
 };
 #endif // MAINWINDOW_H

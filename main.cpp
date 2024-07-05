@@ -12,19 +12,17 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QMainWindow mainWindow;
-    //QWidget centralWidget;
-
-    // QTranslator translator;
-    // const QStringList uiLanguages = QLocale::system().uiLanguages();
-    // for (const QString &locale : uiLanguages) {
-    //     const QString baseName = "SET_" + QLocale(locale).name();
-    //     if (translator.load(":/i18n/" + baseName)) {
-    //         a.installTranslator(&translator);
-    //         break;
-    //     }
-    // }
     MainWindow w;
     w.show();
+    
+    //gave error so i commented
+
+    //  if (!createConnection())
+    //     return 1;
+    // TableEditor editor("person");
+    // editor.show();
+    
+    
     return a.exec();
 }
 
