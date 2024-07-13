@@ -25,7 +25,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout">
@@ -115,7 +115,7 @@
               <string>Password:</string>
              </property>
             </widget>
-            <widget class="QLineEdit" name="lineEdit_2">
+            <widget class="QLineEdit" name="lineEditpassword">
              <property name="geometry">
               <rect>
                <x>30</x>
@@ -826,7 +826,7 @@
          <string>Choose One</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButtonadde">
+       <widget class="QPushButton" name="pushButtonAddExpense">
         <property name="geometry">
          <rect>
           <x>110</x>
@@ -862,7 +862,7 @@
          <string>Cancel</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButtonaddi">
+       <widget class="QPushButton" name="pushButtonAddIncome">
         <property name="geometry">
          <rect>
           <x>299</x>
@@ -956,7 +956,7 @@
          <string>Go Back</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButtonok_e">
+       <widget class="QPushButton" name="pushButtonConfirmExpense">
         <property name="geometry">
          <rect>
           <x>360</x>
@@ -1050,7 +1050,7 @@
          <string>Go Back</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButtonok_in">
+       <widget class="QPushButton" name="pushButtonConfirmIncome">
         <property name="geometry">
          <rect>
           <x>320</x>

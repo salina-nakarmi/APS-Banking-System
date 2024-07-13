@@ -154,9 +154,13 @@ C:/Users/Lenovo/OneDrive/Desktop/SET/mainwindow.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtSql/qtsqlglobal.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMessageBox
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialogbuttonbox.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h
+ mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmessagebox.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h
  mdp:C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h

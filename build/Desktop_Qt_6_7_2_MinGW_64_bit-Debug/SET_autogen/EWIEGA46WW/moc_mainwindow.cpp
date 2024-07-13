@@ -42,13 +42,13 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_pushButtoncreate_clicked",
     "on_pushButtonconfirm_clicked",
     "on_pushButtonback_e_clicked",
-    "on_pushButtonok_e_clicked",
+    "on_pushButtonConfirmExpense_clicked",
     "on_pushButtonadd_clicked",
-    "on_pushButtonadde_clicked",
-    "on_pushButtonaddi_clicked",
+    "on_pushButtonAddIncome_clicked",
+    "on_pushButtonAddExpense_clicked",
     "on_pushButtoncancel_clicked",
     "on_pushButtongback_in_clicked",
-    "on_pushButtonok_in_clicked",
+    "on_pushButtonConfirmIncome_clicked",
     "on_pushButtonsignup_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -117,19 +117,19 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButtonback_e_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButtonok_e_clicked'
+        // method 'on_pushButtonConfirmExpense_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButtonadd_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButtonadde_clicked'
+        // method 'on_pushButtonAddIncome_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButtonaddi_clicked'
+        // method 'on_pushButtonAddExpense_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButtoncancel_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButtongback_in_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButtonok_in_clicked'
+        // method 'on_pushButtonConfirmIncome_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButtonsignup_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
@@ -147,13 +147,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 1: _t->on_pushButtoncreate_clicked(); break;
         case 2: _t->on_pushButtonconfirm_clicked(); break;
         case 3: _t->on_pushButtonback_e_clicked(); break;
-        case 4: _t->on_pushButtonok_e_clicked(); break;
+        case 4: _t->on_pushButtonConfirmExpense_clicked(); break;
         case 5: _t->on_pushButtonadd_clicked(); break;
-        case 6: _t->on_pushButtonadde_clicked(); break;
-        case 7: _t->on_pushButtonaddi_clicked(); break;
+        case 6: _t->on_pushButtonAddIncome_clicked(); break;
+        case 7: _t->on_pushButtonAddExpense_clicked(); break;
         case 8: _t->on_pushButtoncancel_clicked(); break;
         case 9: _t->on_pushButtongback_in_clicked(); break;
-        case 10: _t->on_pushButtonok_in_clicked(); break;
+        case 10: _t->on_pushButtonConfirmIncome_clicked(); break;
         case 11: _t->on_pushButtonsignup_clicked(); break;
         default: ;
         }

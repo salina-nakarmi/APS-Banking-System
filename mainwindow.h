@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include<QLabel>
 #include<QtSql/QSqlDatabase>
+#include <QMessageBox>
 
 QT_BEGIN_NAMESPACE
 
@@ -33,21 +34,26 @@ private slots:
 
     void on_pushButtonback_e_clicked();
 
-    void on_pushButtonok_e_clicked();
+    void on_pushButtonConfirmExpense_clicked();
 
     void on_pushButtonadd_clicked();
 
-    void on_pushButtonadde_clicked();
+    void on_pushButtonAddIncome_clicked();
 
-    void on_pushButtonaddi_clicked();
+    void on_pushButtonAddExpense_clicked();
 
     void on_pushButtoncancel_clicked();
 
     void on_pushButtongback_in_clicked();
 
-    void on_pushButtonok_in_clicked();
+    void on_pushButtonConfirmIncome_clicked();
 
     void on_pushButtonsignup_clicked();
+
+    
+    //void on_pushButtonAddExpense_clicked();
+    //
+    //
 
 private:
     Ui::MainWindow *ui;
