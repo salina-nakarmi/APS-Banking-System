@@ -4,18 +4,26 @@
 #include<string>
 #include<QString>
 #include<fstream>
-#include <QtSql/QSqlError>
-#include <QtSql/QSqlQuery>
+#include<QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
 #include <QDebug>
 #include <QDate>
 #include<QLabel>
 
-MainWindow::MainWindow(QWidget *parent):
-     QMainWindow(parent),
-     ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent)
+    : QMainWindow(parent)
+    , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
+     // Initialize the database
+    initializeDatabase();
+    // Assuming ui->stackedWidget is your QStackedWidget
+    ui->stackedWidget->setCurrentIndex(0); // Set to the first page by default
+
+    // Make sure the stacked widget fits the window
+    setCentralWidget(ui->stackedWidget);
      
     // Get the current date
     QDate currentDate = QDate::currentDate();
@@ -31,14 +39,7 @@ MainWindow::MainWindow(QWidget *parent):
     
     //----------------------------------------------------------------------------
 
-    // Set up the SQLite database
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("users.db");
-     if (!db.open()) {
-        qDebug() << "Error: Could not connect to database.";
-    } else {
-        qDebug() << "Database connected successfully.";
-    }
+  
 }
 
 //just created struct not in use right now
@@ -47,11 +48,28 @@ struct accountInfo{
     QString password;
 };
 
+
+
 MainWindow::~MainWindow()
 {
     delete ui;
     db.close();
 }
+
+void MainWindow::initializeDatabase()
+{
+    // Set up the database connection
+    db = QSqlDatabase::addDatabase("QSQLITE");
+    db.setDatabaseName("C:\\Users\\Lenovo\\OneDrive\\Desktop\\SET\\database\\users.db");
+
+    // Open the database
+    if (!db.open()) {
+        qDebug() << "Database connection failed!";
+    } else {
+        qDebug() << "Database connected successfully!";
+    }
+}
+
 
 //navigation
 void MainWindow::on_pushButtonlogin_clicked()

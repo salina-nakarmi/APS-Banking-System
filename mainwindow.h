@@ -52,6 +52,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;
+    void initializeDatabase();
     QLabel *dateLabel;
     QLabel *monthYearLabel;
 };
