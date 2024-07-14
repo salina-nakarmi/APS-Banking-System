@@ -6,9 +6,5 @@
     </qresource>
     <qresource prefix="/logo">
         <file>logo.png</file>
-        <file>../../../Downloads/feather-5142239_1280.jpg</file>
-        <file>../../../Downloads/imagination-3685048_1280.png</file>
-        <file>../../../Downloads/wood-1759566_1280.jpg</file>
-        <file>../../../Downloads/blue-250770_1280.jpg</file>
     </qresource>
 </RCC>
