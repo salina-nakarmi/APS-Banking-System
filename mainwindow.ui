@@ -25,7 +25,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout">
@@ -243,7 +243,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLineEdit" name="lineEdit_4">
+         <widget class="QLineEdit" name="lineEditFirstName">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -253,7 +253,7 @@
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_3">
+         <widget class="QLineEdit" name="lineEditMiddleName">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -263,7 +263,7 @@
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_5">
+         <widget class="QLineEdit" name="lineEditLastName">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -273,7 +273,7 @@
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_6">
+         <widget class="QLineEdit" name="lineEditUsername">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -283,11 +283,11 @@
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_7">
+         <widget class="QLineEdit" name="lineEditMobileNumber">
           <property name="geometry">
            <rect>
             <x>30</x>
-            <y>290</y>
+            <y>280</y>
             <width>231</width>
             <height>21</height>
            </rect>
@@ -371,7 +371,7 @@
            <string>Password</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEdit_8">
+         <widget class="QLineEdit" name="lineEditPassword">
           <property name="geometry">
            <rect>
             <x>30</x>
@@ -381,7 +381,7 @@
            </rect>
           </property>
          </widget>
-         <widget class="QPushButton" name="pushButtoncreate">
+         <widget class="QPushButton" name="pushButtonCreateAccount">
           <property name="geometry">
            <rect>
             <x>130</x>
@@ -504,7 +504,7 @@
            <string>Confirm</string>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEditbirthplace">
+         <widget class="QLineEdit" name="lineEditSecurityAnswer1">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -514,7 +514,7 @@
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEditfavFood">
+         <widget class="QLineEdit" name="lineEditSecurityAnswer2">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -524,7 +524,7 @@
            </rect>
           </property>
          </widget>
-         <widget class="QLineEdit" name="lineEditfavMovie">
+         <widget class="QLineEdit" name="lineEditSecurityAnswer3">
           <property name="geometry">
            <rect>
             <x>20</x>
@@ -918,7 +918,7 @@
          <string>Amount:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEditnote_e">
+       <widget class="QLineEdit" name="lineEditNoteExpense">
         <property name="geometry">
          <rect>
           <x>200</x>
@@ -928,7 +928,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEditamount_e">
+       <widget class="QLineEdit" name="lineEditAmountExpense">
         <property name="geometry">
          <rect>
           <x>220</x>
@@ -1012,7 +1012,7 @@
          <string>Amount:</string>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEditnote_in">
+       <widget class="QLineEdit" name="lineEditNoteIncome">
         <property name="geometry">
          <rect>
           <x>210</x>
@@ -1022,7 +1022,7 @@
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEditamount_in">
+       <widget class="QLineEdit" name="lineEditAmountIncome">
         <property name="geometry">
          <rect>
           <x>210</x>

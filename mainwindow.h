@@ -28,7 +28,7 @@ private slots:
 
     void on_pushButtonlogin_clicked();
 
-    void on_pushButtoncreate_clicked();
+    void on_pushButtonCreateAccount_clicked();
 
     void on_pushButtonconfirm_clicked();
 
@@ -61,5 +61,8 @@ private:
     void initializeDatabase();
     QLabel *dateLabel;
     QLabel *monthYearLabel;
+    void addTransaction(double amount,const QString& category, const QString& description);
+    void viewTransactions();
+    void createUser(const QString &firstName, const QString &middleName, const QString &lastName, const QString &username, const QString &mobileNumber, const QString &password,  const QString &answer1, const QString &answer2, const QString &answer3);
 };
 #endif // MAINWINDOW_H

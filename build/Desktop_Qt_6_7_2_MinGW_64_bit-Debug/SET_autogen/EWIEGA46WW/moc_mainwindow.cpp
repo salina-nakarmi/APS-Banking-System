@@ -39,7 +39,7 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "MainWindow",
     "on_pushButtonlogin_clicked",
     "",
-    "on_pushButtoncreate_clicked",
+    "on_pushButtonCreateAccount_clicked",
     "on_pushButtonconfirm_clicked",
     "on_pushButtonback_e_clicked",
     "on_pushButtonConfirmExpense_clicked",
@@ -111,7 +111,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
         // method 'on_pushButtonlogin_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pushButtoncreate_clicked'
+        // method 'on_pushButtonCreateAccount_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButtonconfirm_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -144,7 +144,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->on_pushButtonlogin_clicked(); break;
-        case 1: _t->on_pushButtoncreate_clicked(); break;
+        case 1: _t->on_pushButtonCreateAccount_clicked(); break;
         case 2: _t->on_pushButtonconfirm_clicked(); break;
         case 3: _t->on_pushButtonback_e_clicked(); break;
         case 4: _t->on_pushButtonConfirmExpense_clicked(); break;
