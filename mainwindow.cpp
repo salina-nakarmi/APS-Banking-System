@@ -66,7 +66,7 @@ void MainWindow::initializeDatabase()
 {
     // Set up the database connection
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:\\Users\\Lenovo\\OneDrive\\Desktop\\SET\\database\\users.db");
+    db.setDatabaseName("users.db");
 
     // Open the database
     if (!db.open()) {
@@ -124,8 +124,9 @@ void MainWindow::on_pushButtonlogin_clicked()
 
     if (db.isOpen()) {
         QSqlQuery query;
-        query.prepare("INSERT INTO users (name, password) VALUES (:name, :password)");
+        query.prepare("INSERT INTO users (id,  username, password) VALUES (:id,:name, :password)");
         query.bindValue(":name", userName);
+        query.bindValue(":id", 2);
         query.bindValue(":password", userPassword);
 
         if (!query.exec()) {
