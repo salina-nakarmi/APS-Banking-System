@@ -177,7 +177,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(571, 449);
+        MainWindow->resize(586, 449);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/logo/logo.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         MainWindow->setWindowIcon(icon);

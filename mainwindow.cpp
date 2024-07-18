@@ -46,6 +46,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->pushButtonAddExpense, &QPushButton::clicked, this, &MainWindow::on_pushButtonAddExpense_clicked);
     connect(ui->pushButtonConfirmIncome, &QPushButton::clicked, this, &MainWindow::on_pushButtonConfirmIncome_clicked);
     connect(ui->pushButtonConfirmExpense, &QPushButton::clicked, this, &MainWindow::on_pushButtonConfirmExpense_clicked);
+    connect(ui->pushButtonlogin, &QPushButton::clicked, this, &MainWindow::on_pushButtonlogin_clicked);
+    connect(ui->pushButtonsignup, &QPushButton::clicked, this, &MainWindow::on_pushButtonsignup_clicked); // Connect the sign-up button
 }
 
 //just created struct not in use right now
@@ -90,33 +92,32 @@ void MainWindow::initializeDatabase()
             qDebug() << "Error creating table: " << query.lastError();
         }
 
-   // Create users table
-      
-    if (!query.exec("CREATE TABLE IF NOT EXISTS users ("
-                    "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-                    "first_name TEXT, "
-                    "middle_name TEXT, "
-                    "last_name TEXT, "
-                    "username TEXT UNIQUE, "
-                    "mobile_number TEXT, "
-                    "password TEXT, "
 
-                    "security_answer1 TEXT, "
-                   
-                    "security_answer2 TEXT, "
-                    //"security_question3 TEXT, "
-                    "security_answer3 TEXT)")) {
-        qDebug() << "Error creating users table: " << query.lastError();
-    } else {
-        qDebug() << "Users table created successfully.";
-    }
+        // Create singup table
+        QString createSignupTableQuery = R"(
+    CREATE TABLE IF NOT EXISTS Signup (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        first_name TEXT,
+        middle_name TEXT,
+        last_name TEXT,
+        username TEXT UNIQUE,
+        mobile_number TEXT,
+        password TEXT
+    )
+)";
+        if (!query.exec(createSignupTableQuery)) {
+            qDebug() << "Error creating signup table: " << query.lastError();
+        } else {
+            qDebug() << "singup table created successfully.";
+        }
+
 
 
 }
 
 
 //navigation
-void MainWindow::on_pushButtonlogin_clicked()
+/*void MainWindow::on_pushButtonlogin_clicked()
 {
    ui->stackedWidget->setCurrentIndex(3);
     QString userName = ui->lineEditusername->text();
@@ -124,7 +125,7 @@ void MainWindow::on_pushButtonlogin_clicked()
 
     if (db.isOpen()) {
         QSqlQuery query;
-        query.prepare("INSERT INTO users (id,  username, password) VALUES (:id,:name, :password)");
+        query.prepare("SELECT INTO users (id,  username, password) VALUES (:id,:name, :password)");
         query.bindValue(":name", userName);
         query.bindValue(":id", 2);
         query.bindValue(":password", userPassword);
@@ -138,32 +139,73 @@ void MainWindow::on_pushButtonlogin_clicked()
         QMessageBox::critical(this, "Error", "Database connection failed!");
     }
 
+}*/
+void MainWindow::on_pushButtonlogin_clicked() {
+    QString username = ui->lineEditUsername->text();
+    QString password = ui->lineEditPassword->text();
+
+    QSqlQuery query;
+    query.prepare("SELECT * FROM users WHERE username = :username AND password = :password");
+    query.bindValue(":username", username);
+    query.bindValue(":password", password);
+
+    if (query.exec()) {
+        if (query.next()) {
+            // User found, login successful
+            QMessageBox::information(this, "Login", "Login successful!");
+            // Proceed to next window or functionality
+        } else {
+            // User not found, login failed
+            QMessageBox::warning(this, "Login", "Username or password incorrect!");
+        }
+    } else {
+        // Query execution failed
+        QMessageBox::critical(this, "Database Error", query.lastError().text());
+    }
 }
 
-void MainWindow::on_pushButtonCreateAccount_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(2);
-     QString firstName = ui->lineEditFirstName->text();
+void MainWindow::on_pushButtonCreateAccount_clicked() {
+    QString firstName = ui->lineEditFirstName->text();
     QString middleName = ui->lineEditMiddleName->text();
     QString lastName = ui->lineEditLastName->text();
     QString username = ui->lineEditUsername->text();
     QString mobileNumber = ui->lineEditMobileNumber->text();
     QString password = ui->lineEditPassword->text();
 
-    //QString question1 = ui->lineEditSecurityQuestion1->text();
-    QString answer1 = ui->lineEditSecurityAnswer1->text();
-    //QString question2 = ui->lineEditSecurityQuestion2->text();
-    QString answer2 = ui->lineEditSecurityAnswer2->text();
-    //QString question3 = ui->lineEditSecurityQuestion3->text();
-    QString answer3 = ui->lineEditSecurityAnswer3->text();
+    QSqlQuery query;
+    query.prepare("INSERT INTO users (id, first_name, middle_name, last_name, username, mobile_number, password) VALUES (:id, :first_name, :middle_name, :last_name, :username, :mobile_number, :password)");
 
-    createUser(firstName, middleName, lastName, username, mobileNumber, password, answer1,answer2,answer3);
+    query.bindValue(":first_name", firstName);
+    query.bindValue(":middle_name", middleName);
+    query.bindValue(":last_name", lastName);
+    query.bindValue(":username", username);
+    query.bindValue(":mobile_number", mobileNumber);
+    query.bindValue(":password", password);
 
+    if (query.exec()) {
+        // User successfully signed up
+        QMessageBox::information(this, "Sign-Up", "Account created successfully!");
+        // Clear input fields
+        ui->lineEditFirstName->clear();
+        ui->lineEditMiddleName->clear();
+        ui->lineEditLastName->clear();
+        ui->lineEditUsername->clear();
+        ui->lineEditMobileNumber->clear();
+        ui->lineEditPassword->clear();
+
+        // Optionally, switch to the login page or another page
+        ui->stackedWidget->setCurrentIndex(1);  // Adjust the index based on your widget layout
+    } else {
+        // Error handling
+        QMessageBox::critical(this, "Database Error", query.lastError().text());
+    }
 }
+
 
 void MainWindow::on_pushButtonsignup_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+
 
 }
 
@@ -258,7 +300,7 @@ void MainWindow::viewTransactions()
 }
 
 
-void MainWindow::createUser(const QString &firstName, const QString &middleName, const QString &lastName, const QString &username, const QString &mobileNumber, const QString &password, const QString &answer1, const QString &answer2, const QString &answer3)
+/*void MainWindow::createUser(const QString &firstName, const QString &middleName, const QString &lastName, const QString &username, const QString &mobileNumber, const QString &password, const QString &answer1, const QString &answer2, const QString &answer3)
 {
     QSqlQuery query;
     query.prepare("INSERT INTO users (first_name, middle_name, last_name, username, mobile_number, password, security_question1, security_answer1, security_question2, security_answer2, security_question3, security_answer3) "
@@ -278,7 +320,8 @@ void MainWindow::createUser(const QString &firstName, const QString &middleName,
     } else {
         qDebug() << "User created successfully.";
     }
-}
+}*/
+
 
 
 

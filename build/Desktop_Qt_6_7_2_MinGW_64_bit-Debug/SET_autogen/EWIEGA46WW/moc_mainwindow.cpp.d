@@ -1,5 +1,5 @@
-C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/Lenovo/OneDrive/Desktop/SET/mainwindow.h \
-  C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/moc_predefs.h \
+C:/Users/ADMIN/Desktop/seet2.0/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/ADMIN/Desktop/seet2.0/mainwindow.h \
+  C:/Users/ADMIN/Desktop/seet2.0/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/SET_autogen/moc_predefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/q20type_traits.h \

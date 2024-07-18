@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "SET::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SET-Debug-e3dc2c6ed3583cd41ea3.json",
+					"jsonFile" : "target-SET-Debug-d57dd96dac79125b7fcb.json",
 					"name" : "SET",
 					"projectIndex" : 0
 				},
@@ -68,8 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Lenovo/OneDrive/Desktop/SET/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
-		"source" : "C:/Users/Lenovo/OneDrive/Desktop/SET"
+		"build" : "C:/Users/ADMIN/Desktop/seet2.0/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/ADMIN/Desktop/seet2.0"
 	},
 	"version" : 
 	{
