@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
@@ -44,6 +45,7 @@ public:
     QLabel *label_14;
     QPushButton *pushButtonsignup;
     QLabel *Welcome;
+    QLabel *label_31;
     QWidget *page_3;
     QFrame *outerFrame_1;
     QFrame *innerFrame_1;
@@ -61,16 +63,12 @@ public:
     QLineEdit *lineEditPassword;
     QPushButton *pushButtonCreateAccount;
     QWidget *page_4;
-    QFrame *innerFrame_3;
-    QFrame *outerFrame_3;
-    QLabel *labelsecuityqn;
-    QLabel *labelbirthPlace;
-    QLabel *labelfavFood;
-    QLabel *labelfavMovie;
-    QPushButton *pushButtonconfirm;
-    QLineEdit *lineEditSecurityAnswer1;
-    QLineEdit *lineEditSecurityAnswer2;
-    QLineEdit *lineEditSecurityAnswer3;
+    QFrame *frame_6;
+    QFrame *frame_7;
+    QLabel *label_32;
+    QComboBox *nickname;
+    QComboBox *hobby;
+    QPushButton *next;
     QWidget *page_5;
     QFrame *frameie;
     QLabel *label_2;
@@ -177,7 +175,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(586, 449);
+        MainWindow->resize(633, 525);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/logo/logo.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
         MainWindow->setWindowIcon(icon);
@@ -199,37 +197,40 @@ public:
         frame->setFrameShadow(QFrame::Raised);
         outerFrame0 = new QFrame(frame);
         outerFrame0->setObjectName("outerFrame0");
-        outerFrame0->setGeometry(QRect(-70, 0, 731, 561));
-        outerFrame0->setStyleSheet(QString::fromUtf8(""));
+        outerFrame0->setGeometry(QRect(-100, -10, 721, 561));
+        outerFrame0->setStyleSheet(QString::fromUtf8("background-color: rgb(197, 197, 197);\n"
+"border-color: rgb(15, 15, 15);\n"
+"background-color: rgb(237, 237, 237);"));
         outerFrame0->setFrameShape(QFrame::StyledPanel);
         outerFrame0->setFrameShadow(QFrame::Raised);
         innerFrame_0 = new QFrame(outerFrame0);
         innerFrame_0->setObjectName("innerFrame_0");
-        innerFrame_0->setGeometry(QRect(190, 10, 321, 381));
-        innerFrame_0->setStyleSheet(QString::fromUtf8(""));
+        innerFrame_0->setGeometry(QRect(220, 40, 301, 381));
+        innerFrame_0->setStyleSheet(QString::fromUtf8("background-color: rgb(239, 239, 239);\n"
+""));
         innerFrame_0->setFrameShape(QFrame::StyledPanel);
         innerFrame_0->setFrameShadow(QFrame::Raised);
         label = new QLabel(innerFrame_0);
         label->setObjectName("label");
-        label->setGeometry(QRect(30, 50, 91, 16));
+        label->setGeometry(QRect(30, 60, 91, 16));
         lineEditusername = new QLineEdit(innerFrame_0);
         lineEditusername->setObjectName("lineEditusername");
-        lineEditusername->setGeometry(QRect(30, 90, 261, 21));
+        lineEditusername->setGeometry(QRect(30, 100, 261, 21));
         labelpassword = new QLabel(innerFrame_0);
         labelpassword->setObjectName("labelpassword");
-        labelpassword->setGeometry(QRect(30, 130, 91, 16));
+        labelpassword->setGeometry(QRect(30, 140, 91, 16));
         lineEditpassword = new QLineEdit(innerFrame_0);
         lineEditpassword->setObjectName("lineEditpassword");
         lineEditpassword->setGeometry(QRect(30, 170, 261, 21));
         pushButtonlogin = new QPushButton(innerFrame_0);
         pushButtonlogin->setObjectName("pushButtonlogin");
-        pushButtonlogin->setGeometry(QRect(110, 210, 75, 24));
+        pushButtonlogin->setGeometry(QRect(110, 210, 81, 21));
         label_15 = new QLabel(innerFrame_0);
         label_15->setObjectName("label_15");
-        label_15->setGeometry(QRect(90, 250, 191, 16));
+        label_15->setGeometry(QRect(60, 250, 231, 20));
         label_14 = new QLabel(innerFrame_0);
         label_14->setObjectName("label_14");
-        label_14->setGeometry(QRect(80, 280, 211, 20));
+        label_14->setGeometry(QRect(60, 280, 211, 20));
         pushButtonsignup = new QPushButton(innerFrame_0);
         pushButtonsignup->setObjectName("pushButtonsignup");
         pushButtonsignup->setGeometry(QRect(110, 310, 75, 24));
@@ -239,6 +240,9 @@ public:
         QFont font;
         font.setPointSize(16);
         Welcome->setFont(font);
+        label_31 = new QLabel(innerFrame_0);
+        label_31->setObjectName("label_31");
+        label_31->setGeometry(QRect(160, 250, 131, 20));
 
         gridLayout->addWidget(frame, 0, 0, 1, 1);
 
@@ -247,7 +251,7 @@ public:
         page_3->setObjectName("page_3");
         outerFrame_1 = new QFrame(page_3);
         outerFrame_1->setObjectName("outerFrame_1");
-        outerFrame_1->setGeometry(QRect(-10, 0, 771, 591));
+        outerFrame_1->setGeometry(QRect(-10, -10, 771, 591));
         outerFrame_1->setStyleSheet(QString::fromUtf8("#outerFrame_2 {\n"
 "    background-image: url(:/background/frame.png);\n"
 "}"));
@@ -255,89 +259,82 @@ public:
         outerFrame_1->setFrameShadow(QFrame::Raised);
         innerFrame_1 = new QFrame(outerFrame_1);
         innerFrame_1->setObjectName("innerFrame_1");
-        innerFrame_1->setGeometry(QRect(100, 0, 341, 511));
+        innerFrame_1->setGeometry(QRect(150, 40, 341, 451));
         innerFrame_1->setStyleSheet(QString::fromUtf8(""));
         innerFrame_1->setFrameShape(QFrame::StyledPanel);
         innerFrame_1->setFrameShadow(QFrame::Raised);
         lineEditFirstName = new QLineEdit(innerFrame_1);
         lineEditFirstName->setObjectName("lineEditFirstName");
-        lineEditFirstName->setGeometry(QRect(30, 30, 221, 21));
+        lineEditFirstName->setGeometry(QRect(30, 60, 221, 21));
         lineEditMiddleName = new QLineEdit(innerFrame_1);
         lineEditMiddleName->setObjectName("lineEditMiddleName");
-        lineEditMiddleName->setGeometry(QRect(30, 100, 221, 21));
+        lineEditMiddleName->setGeometry(QRect(30, 120, 221, 21));
         lineEditLastName = new QLineEdit(innerFrame_1);
         lineEditLastName->setObjectName("lineEditLastName");
-        lineEditLastName->setGeometry(QRect(30, 160, 231, 21));
+        lineEditLastName->setGeometry(QRect(30, 170, 231, 21));
         lineEditUsername = new QLineEdit(innerFrame_1);
         lineEditUsername->setObjectName("lineEditUsername");
-        lineEditUsername->setGeometry(QRect(30, 220, 231, 21));
+        lineEditUsername->setGeometry(QRect(30, 230, 231, 21));
         lineEditMobileNumber = new QLineEdit(innerFrame_1);
         lineEditMobileNumber->setObjectName("lineEditMobileNumber");
         lineEditMobileNumber->setGeometry(QRect(30, 280, 231, 21));
         label_3 = new QLabel(innerFrame_1);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(30, 10, 61, 16));
+        label_3->setGeometry(QRect(30, 40, 61, 16));
         label_5 = new QLabel(innerFrame_1);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(28, 70, 81, 21));
+        label_5->setGeometry(QRect(30, 90, 81, 21));
         label_6 = new QLabel(innerFrame_1);
         label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(30, 135, 71, 21));
+        label_6->setGeometry(QRect(30, 140, 71, 21));
         label_7 = new QLabel(innerFrame_1);
         label_7->setObjectName("label_7");
-        label_7->setGeometry(QRect(28, 195, 61, 20));
+        label_7->setGeometry(QRect(30, 200, 61, 20));
         label_8 = new QLabel(innerFrame_1);
         label_8->setObjectName("label_8");
         label_8->setGeometry(QRect(30, 260, 71, 16));
         label_9 = new QLabel(innerFrame_1);
         label_9->setObjectName("label_9");
-        label_9->setGeometry(QRect(30, 330, 71, 16));
+        label_9->setGeometry(QRect(30, 310, 71, 16));
         lineEditPassword = new QLineEdit(innerFrame_1);
         lineEditPassword->setObjectName("lineEditPassword");
-        lineEditPassword->setGeometry(QRect(30, 360, 231, 21));
+        lineEditPassword->setGeometry(QRect(30, 330, 231, 21));
         pushButtonCreateAccount = new QPushButton(innerFrame_1);
         pushButtonCreateAccount->setObjectName("pushButtonCreateAccount");
-        pushButtonCreateAccount->setGeometry(QRect(130, 420, 75, 24));
+        pushButtonCreateAccount->setGeometry(QRect(110, 370, 75, 24));
         stackedWidget->addWidget(page_3);
         page_4 = new QWidget();
         page_4->setObjectName("page_4");
-        innerFrame_3 = new QFrame(page_4);
-        innerFrame_3->setObjectName("innerFrame_3");
-        innerFrame_3->setGeometry(QRect(90, 0, 771, 591));
-        innerFrame_3->setStyleSheet(QString::fromUtf8(""));
-        innerFrame_3->setFrameShape(QFrame::StyledPanel);
-        innerFrame_3->setFrameShadow(QFrame::Raised);
-        outerFrame_3 = new QFrame(innerFrame_3);
-        outerFrame_3->setObjectName("outerFrame_3");
-        outerFrame_3->setGeometry(QRect(0, 0, 321, 511));
-        outerFrame_3->setStyleSheet(QString::fromUtf8(""));
-        outerFrame_3->setFrameShape(QFrame::StyledPanel);
-        outerFrame_3->setFrameShadow(QFrame::Raised);
-        labelsecuityqn = new QLabel(outerFrame_3);
-        labelsecuityqn->setObjectName("labelsecuityqn");
-        labelsecuityqn->setGeometry(QRect(50, 10, 271, 31));
-        labelsecuityqn->setFont(font);
-        labelbirthPlace = new QLabel(outerFrame_3);
-        labelbirthPlace->setObjectName("labelbirthPlace");
-        labelbirthPlace->setGeometry(QRect(30, 90, 281, 16));
-        labelfavFood = new QLabel(outerFrame_3);
-        labelfavFood->setObjectName("labelfavFood");
-        labelfavFood->setGeometry(QRect(30, 190, 271, 20));
-        labelfavMovie = new QLabel(outerFrame_3);
-        labelfavMovie->setObjectName("labelfavMovie");
-        labelfavMovie->setGeometry(QRect(30, 280, 171, 16));
-        pushButtonconfirm = new QPushButton(outerFrame_3);
-        pushButtonconfirm->setObjectName("pushButtonconfirm");
-        pushButtonconfirm->setGeometry(QRect(100, 360, 75, 24));
-        lineEditSecurityAnswer1 = new QLineEdit(outerFrame_3);
-        lineEditSecurityAnswer1->setObjectName("lineEditSecurityAnswer1");
-        lineEditSecurityAnswer1->setGeometry(QRect(20, 130, 251, 21));
-        lineEditSecurityAnswer2 = new QLineEdit(outerFrame_3);
-        lineEditSecurityAnswer2->setObjectName("lineEditSecurityAnswer2");
-        lineEditSecurityAnswer2->setGeometry(QRect(20, 220, 271, 21));
-        lineEditSecurityAnswer3 = new QLineEdit(outerFrame_3);
-        lineEditSecurityAnswer3->setObjectName("lineEditSecurityAnswer3");
-        lineEditSecurityAnswer3->setGeometry(QRect(20, 310, 271, 21));
+        frame_6 = new QFrame(page_4);
+        frame_6->setObjectName("frame_6");
+        frame_6->setGeometry(QRect(150, 40, 301, 401));
+        frame_6->setFrameShape(QFrame::StyledPanel);
+        frame_6->setFrameShadow(QFrame::Raised);
+        frame_7 = new QFrame(frame_6);
+        frame_7->setObjectName("frame_7");
+        frame_7->setGeometry(QRect(60, 30, 191, 41));
+        QFont font1;
+        font1.setPointSize(16);
+        font1.setBold(true);
+        frame_7->setFont(font1);
+        frame_7->setFrameShape(QFrame::StyledPanel);
+        frame_7->setFrameShadow(QFrame::Raised);
+        label_32 = new QLabel(frame_7);
+        label_32->setObjectName("label_32");
+        label_32->setGeometry(QRect(20, 10, 241, 21));
+        nickname = new QComboBox(frame_6);
+        nickname->addItem(QString());
+        nickname->addItem(QString());
+        nickname->setObjectName("nickname");
+        nickname->setGeometry(QRect(64, 140, 171, 22));
+        hobby = new QComboBox(frame_6);
+        hobby->addItem(QString());
+        hobby->addItem(QString());
+        hobby->setObjectName("hobby");
+        hobby->setGeometry(QRect(60, 230, 171, 22));
+        next = new QPushButton(frame_6);
+        next->setObjectName("next");
+        next->setGeometry(QRect(120, 280, 51, 16));
         stackedWidget->addWidget(page_4);
         page_5 = new QWidget();
         page_5->setObjectName("page_5");
@@ -389,19 +386,19 @@ public:
         pushButtonadd = new QPushButton(frame_3);
         pushButtonadd->setObjectName("pushButtonadd");
         pushButtonadd->setGeometry(QRect(230, 20, 80, 31));
-        QFont font1;
-        font1.setPointSize(36);
-        pushButtonadd->setFont(font1);
+        QFont font2;
+        font2.setPointSize(36);
+        pushButtonadd->setFont(font2);
         pushButtonme = new QPushButton(frame_3);
         pushButtonme->setObjectName("pushButtonme");
         pushButtonme->setGeometry(QRect(410, 17, 80, 31));
-        QFont font2;
-        font2.setPointSize(18);
-        pushButtonme->setFont(font2);
+        QFont font3;
+        font3.setPointSize(18);
+        pushButtonme->setFont(font3);
         pushButtontracker = new QPushButton(frame_3);
         pushButtontracker->setObjectName("pushButtontracker");
         pushButtontracker->setGeometry(QRect(40, 20, 80, 31));
-        pushButtontracker->setFont(font2);
+        pushButtontracker->setFont(font3);
         frame_5 = new QFrame(page_5);
         frame_5->setObjectName("frame_5");
         frame_5->setGeometry(QRect(0, 70, 481, 21));
@@ -420,15 +417,15 @@ public:
         pushButtonAddExpense = new QPushButton(page_6);
         pushButtonAddExpense->setObjectName("pushButtonAddExpense");
         pushButtonAddExpense->setGeometry(QRect(110, 140, 141, 31));
-        pushButtonAddExpense->setFont(font2);
+        pushButtonAddExpense->setFont(font3);
         pushButtoncancel = new QPushButton(page_6);
         pushButtoncancel->setObjectName("pushButtoncancel");
         pushButtoncancel->setGeometry(QRect(230, 250, 80, 31));
-        pushButtoncancel->setFont(font2);
+        pushButtoncancel->setFont(font3);
         pushButtonAddIncome = new QPushButton(page_6);
         pushButtonAddIncome->setObjectName("pushButtonAddIncome");
         pushButtonAddIncome->setGeometry(QRect(299, 140, 141, 31));
-        pushButtonAddIncome->setFont(font2);
+        pushButtonAddIncome->setFont(font3);
         stackedWidget->addWidget(page_6);
         page_7 = new QWidget();
         page_7->setObjectName("page_7");
@@ -449,11 +446,11 @@ public:
         pushButtonback_e = new QPushButton(page_7);
         pushButtonback_e->setObjectName("pushButtonback_e");
         pushButtonback_e->setGeometry(QRect(10, 270, 141, 31));
-        pushButtonback_e->setFont(font2);
+        pushButtonback_e->setFont(font3);
         pushButtonConfirmExpense = new QPushButton(page_7);
         pushButtonConfirmExpense->setObjectName("pushButtonConfirmExpense");
         pushButtonConfirmExpense->setGeometry(QRect(360, 260, 141, 31));
-        pushButtonConfirmExpense->setFont(font2);
+        pushButtonConfirmExpense->setFont(font3);
         stackedWidget->addWidget(page_7);
         page_17 = new QWidget();
         page_17->setObjectName("page_17");
@@ -474,11 +471,11 @@ public:
         pushButtongback_in = new QPushButton(page_17);
         pushButtongback_in->setObjectName("pushButtongback_in");
         pushButtongback_in->setGeometry(QRect(30, 250, 141, 31));
-        pushButtongback_in->setFont(font2);
+        pushButtongback_in->setFont(font3);
         pushButtonConfirmIncome = new QPushButton(page_17);
         pushButtonConfirmIncome->setObjectName("pushButtonConfirmIncome");
         pushButtonConfirmIncome->setGeometry(QRect(320, 250, 141, 31));
-        pushButtonConfirmIncome->setFont(font2);
+        pushButtonConfirmIncome->setFont(font3);
         stackedWidget->addWidget(page_17);
         page_8 = new QWidget();
         page_8->setObjectName("page_8");
@@ -677,15 +674,15 @@ public:
         pushButtonadd_2 = new QPushButton(frame_4);
         pushButtonadd_2->setObjectName("pushButtonadd_2");
         pushButtonadd_2->setGeometry(QRect(230, 20, 80, 31));
-        pushButtonadd_2->setFont(font1);
+        pushButtonadd_2->setFont(font2);
         pushButtonme_2 = new QPushButton(frame_4);
         pushButtonme_2->setObjectName("pushButtonme_2");
         pushButtonme_2->setGeometry(QRect(410, 17, 80, 31));
-        pushButtonme_2->setFont(font2);
+        pushButtonme_2->setFont(font3);
         pushButtontracker_2 = new QPushButton(frame_4);
         pushButtontracker_2->setObjectName("pushButtontracker_2");
         pushButtontracker_2->setGeometry(QRect(40, 20, 80, 31));
-        pushButtontracker_2->setFont(font2);
+        pushButtontracker_2->setFont(font3);
         stackedWidget_2->addWidget(page_12);
         page_13 = new QWidget();
         page_13->setObjectName("page_13");
@@ -709,11 +706,11 @@ public:
         pushButtonback_i = new QPushButton(page_14);
         pushButtonback_i->setObjectName("pushButtonback_i");
         pushButtonback_i->setGeometry(QRect(10, 270, 141, 31));
-        pushButtonback_i->setFont(font2);
+        pushButtonback_i->setFont(font3);
         pushButtonok_i = new QPushButton(page_14);
         pushButtonok_i->setObjectName("pushButtonok_i");
         pushButtonok_i->setGeometry(QRect(360, 260, 141, 31));
-        pushButtonok_i->setFont(font2);
+        pushButtonok_i->setFont(font3);
         stackedWidget_2->addWidget(page_14);
         page_15 = new QWidget();
         page_15->setObjectName("page_15");
@@ -732,7 +729,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        stackedWidget->setCurrentIndex(1);
+        stackedWidget->setCurrentIndex(5);
         stackedWidget_2->setCurrentIndex(4);
 
 
@@ -743,14 +740,16 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Saving and expense tracker", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Username:", nullptr));
-        lineEditusername->setPlaceholderText(QCoreApplication::translate("MainWindow", "                                  enter your username", nullptr));
+        lineEditusername->setPlaceholderText(QCoreApplication::translate("MainWindow", "            enter your username", nullptr));
         labelpassword->setText(QCoreApplication::translate("MainWindow", "Password:", nullptr));
-        lineEditpassword->setPlaceholderText(QCoreApplication::translate("MainWindow", "                                enter your password", nullptr));
+        lineEditpassword->setPlaceholderText(QCoreApplication::translate("MainWindow", "            enter your password", nullptr));
         pushButtonlogin->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
-        label_15->setText(QCoreApplication::translate("MainWindow", "Forget password. Click here!!", nullptr));
+        label_15->setText(QCoreApplication::translate("MainWindow", "Forget password", nullptr));
         label_14->setText(QCoreApplication::translate("MainWindow", "Don't have an account? Create one", nullptr));
         pushButtonsignup->setText(QCoreApplication::translate("MainWindow", "Sign up", nullptr));
         Welcome->setText(QCoreApplication::translate("MainWindow", "             WELCOME", nullptr));
+        label_31->setText(QCoreApplication::translate("MainWindow", " <a href='#page7'>click here!</a>\n"
+"", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "First Name", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Middle Name", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Last Name", nullptr));
@@ -758,11 +757,16 @@ public:
         label_8->setText(QCoreApplication::translate("MainWindow", "Mobile no", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "Password", nullptr));
         pushButtonCreateAccount->setText(QCoreApplication::translate("MainWindow", "Create", nullptr));
-        labelsecuityqn->setText(QCoreApplication::translate("MainWindow", "        Security Questions", nullptr));
-        labelbirthPlace->setText(QCoreApplication::translate("MainWindow", "What is your birth place?", nullptr));
-        labelfavFood->setText(QCoreApplication::translate("MainWindow", "What is your favourite food?", nullptr));
-        labelfavMovie->setText(QCoreApplication::translate("MainWindow", "What is your favourite movie? ", nullptr));
-        pushButtonconfirm->setText(QCoreApplication::translate("MainWindow", "Confirm", nullptr));
+        label_32->setText(QCoreApplication::translate("MainWindow", "Security Questions", nullptr));
+        nickname->setItemText(0, QCoreApplication::translate("MainWindow", "pincky", nullptr));
+        nickname->setItemText(1, QCoreApplication::translate("MainWindow", "tury", nullptr));
+
+        nickname->setPlaceholderText(QCoreApplication::translate("MainWindow", "select your nickname", nullptr));
+        hobby->setItemText(0, QCoreApplication::translate("MainWindow", "singing", nullptr));
+        hobby->setItemText(1, QCoreApplication::translate("MainWindow", "reading", nullptr));
+
+        hobby->setPlaceholderText(QCoreApplication::translate("MainWindow", "select your hobby", nullptr));
+        next->setText(QCoreApplication::translate("MainWindow", "next", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Expense", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Income", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Balance", nullptr));

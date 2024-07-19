@@ -55,6 +55,8 @@ private slots:
     //
     //
 
+    void on_nickname_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;

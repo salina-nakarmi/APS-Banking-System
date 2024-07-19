@@ -325,3 +325,9 @@ void MainWindow::viewTransactions()
 
 
 
+
+void MainWindow::on_nickname_currentIndexChanged(int index)
+{
+
+}
+
