@@ -3,7 +3,6 @@
         <file>frame.png</file>
         <file>outerFrame.png</file>
         <file>outerframe1.png</file>
-        <file>../../Downloads/plain black.jpg</file>
     </qresource>
     <qresource prefix="/logo">
         <file>logo.png</file>
